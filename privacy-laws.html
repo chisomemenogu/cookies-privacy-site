@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character set and responsive viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How privacy laws such as the GDPR and CCPA regulate cookies, consent banners, and tracking, and how browsers are changing third-party cookies.">
+  <title>Cookies and Privacy Laws | Cookies and Privacy</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Main menu (same on every page; this page is marked current) -->
+  <header id="site-header">
+    <div class="header-inner">
+      <p class="site-title"><a href="index.html">Cookies &amp; Privacy</a></p>
+      <nav id="main-menu" aria-label="Main menu">
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-cookies-work.html">How Cookies Work</a></li>
+          <li><a href="privacy-laws.html" aria-current="page">Privacy Laws</a></li>
+          <li><a href="key-concepts.html">Key Concepts</a></li>
+          <li><a href="references.html">References</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <h1>Cookies and Privacy Laws</h1>
+    <p class="subtitle">Topic 2: Consent, regulation, and the future of tracking</p>
+
+    <h2>Why Consent Matters</h2>
+    <p>
+      Many cookies are needed for a site to work, such as a cookie that keeps you logged in.
+      Others track behavior for advertising. Privacy laws generally separate these two groups.
+      In the European Union, the ePrivacy Directive requires consent before a site stores or
+      reads information on a user's device, except for strictly necessary purposes. This is why
+      many sites show a <strong>consent banner</strong> when you first arrive.
+    </p>
+
+    <div class="note">
+      <p><strong>Note:</strong> A banner that is hard to decline, or that hides the reject option,
+      can still break the rules. Regulators have fined companies for dark patterns of this kind.</p>
+    </div>
+
+    <h2>GDPR and CCPA</h2>
+    <p>
+      Two major laws shape how cookies are used. The General Data Protection Regulation (GDPR)
+      applies in the EU and the European Economic Area. The California Consumer Privacy Act (CCPA),
+      as amended by the CPRA, applies to businesses that meet certain thresholds and do business
+      with California residents.
+    </p>
+
+    <!-- Comparison table of the two laws -->
+    <table>
+      <caption>GDPR compared with CCPA (summary)</caption>
+      <thead>
+        <tr>
+          <th scope="col">Feature</th>
+          <th scope="col">GDPR (EU)</th>
+          <th scope="col">CCPA/CPRA (California)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Default rule for tracking</td>
+          <td>Opt-in: consent is needed before non-essential cookies are set</td>
+          <td>Opt-out: users can refuse the sale or sharing of their data</td>
+        </tr>
+        <tr>
+          <td>What counts as valid consent</td>
+          <td>Freely given, specific, informed, and unambiguous</td>
+          <td>Clear opt-out mechanisms, such as a "Do Not Sell or Share" link</td>
+        </tr>
+        <tr>
+          <td>Penalties</td>
+          <td>Up to 4% of global annual turnover or 20 million euros, whichever is higher</td>
+          <td>Civil penalties enforced by the California Privacy Protection Agency and the Attorney General</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Browsers and Third-Party Cookies</h2>
+    <p>
+      Browsers are also changing how cookies work. Safari and Firefox have blocked most third-party
+      cookies by default for years. Google announced plans to phase out third-party cookies in Chrome,
+      but it has changed that plan several times. Its Privacy Sandbox proposals aim to support
+      advertising with less cross-site tracking. The result is an uneven landscape: the same website may
+      behave differently depending on the browser a visitor uses.
+    </p>
+
+    <h2>Privacy Alternatives and Their Limits</h2>
+    <p>
+      Blocking cookies does not automatically stop tracking. Sites may turn to alternatives:
+    </p>
+    <ul>
+      <li><strong>Local storage</strong> keeps data on the device without the automatic sending that cookies use.</li>
+      <li><strong>Fingerprinting</strong> combines browser and device details to recognize a visitor without storing anything.</li>
+      <li><strong>Logged-in identifiers</strong> link activity to an account across devices.</li>
+    </ul>
+    <p>
+      Privacy laws apply to many of these methods too. The EU rules on device access cover local
+      storage, and the GDPR treats fingerprinting as personal data processing. Users can protect
+      themselves with privacy settings, tracker blockers, and tools such as the Electronic Frontier
+      Foundation's Cover Your Tracks test.
+    </p>
+  </main>
+
+  <!-- Footer with class project note -->
+  <footer id="site-footer">
+    <p>
+      This website is a class project for IT 3203 Web Development.
+      <a href="https://ksuweb.github.io/IT3203/">Visit the class website</a>.
+    </p>
+  </footer>
+
+</body>
+</html>

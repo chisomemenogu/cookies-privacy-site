@@ -1,13 +1,13 @@
 
 :root {
-  --color-primary: #1f3a5f;   
-  --color-accent: #2e6da4;    
+  --color-primary: #245a42;   
+  --color-accent: #2f6b4f;    
   --color-text: #222222;
   --color-muted: #555555;
-  --color-bg: #f5f7fa;        
+  --color-bg: #f5f7fa;
   --color-card: #ffffff;
-  --color-border: #c9d3df;
-  --color-note: #eaf2fb;
+  --color-border: #a8c5b0;    
+  --color-note: #eef6f1;      
   --font-body: Georgia, "Times New Roman", serif;
   --font-heading: Arial, Helvetica, sans-serif;
 }

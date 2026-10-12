@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character set and responsive viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cookies and Privacy: how cookies work, how privacy laws regulate them, and what the future of tracking looks like.">
+  <title>Cookies and Privacy | Home</title>
+  <!-- The one stylesheet used by every page -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header and main menu (identical on every page; the current page is marked) -->
+  <header id="site-header">
+    <div class="header-inner">
+      <p class="site-title"><a href="index.html">Cookies &amp; Privacy</a></p>
+      <nav id="main-menu" aria-label="Main menu">
+        <ul class="menu">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="how-cookies-work.html">How Cookies Work</a></li>
+          <li><a href="privacy-laws.html">Privacy Laws</a></li>
+          <li><a href="key-concepts.html">Key Concepts</a></li>
+          <li><a href="references.html">References</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <!-- Cover: title, subtitle, and abstract -->
+    <h1>Cookies and Privacy: How the Web Remembers You</h1>
+    <p class="subtitle">Milestone 1: Basic Website with HTML/CSS</p>
+
+    <h2>Abstract</h2>
+    <p>
+      HTTP is a stateless protocol, so a web server does not automatically remember
+      who you are between requests. Cookies solve this problem by letting a server
+      store small pieces of data in your browser. Cookies make logins, shopping carts,
+      and personal settings possible, but they are also the main tool advertisers use
+      to track people across websites. This site explains how cookies work, how privacy
+      laws such as the GDPR and the CCPA regulate them, and what changes are coming
+      as browsers limit tracking.
+    </p>
+
+    <!-- Key terms: a list -->
+    <h2>Key Terms</h2>
+    <ul>
+      <li><strong>Cookie</strong>: a small piece of data a server asks the browser to store.</li>
+      <li><strong>First-party cookie</strong>: set by the website you are visiting.</li>
+      <li><strong>Third-party cookie</strong>: set by a different domain, often an advertiser embedded in the page.</li>
+      <li><strong>Consent banner</strong>: the pop-up that asks permission before non-essential cookies are set.</li>
+    </ul>
+
+    <!-- Table of contents linking to the other pages -->
+    <h2>Table of Contents</h2>
+    <ol class="toc">
+      <li><a href="how-cookies-work.html">How Cookies Work</a>: the mechanics, attributes, and types of cookies.</li>
+      <li><a href="privacy-laws.html">Cookies and Privacy Laws</a>: consent rules, GDPR and CCPA, and the end of third-party cookies.</li>
+      <li><a href="key-concepts.html">Key Concepts</a>: seven essential terms defined.</li>
+      <li><a href="references.html">References and Resources</a>: sources and further reading.</li>
+      <li><a href="about.html">About</a>: who I am and what this project is.</li>
+    </ol>
+
+    <!-- Quick cards using the grid layout -->
+    <h2>Explore the Topic</h2>
+    <div class="card-grid">
+      <article class="card">
+        <h3>The Mechanics</h3>
+        <p>How a server sets a cookie and how the browser sends it back.</p>
+        <p><a href="how-cookies-work.html">Read the mechanics</a></p>
+      </article>
+      <article class="card">
+        <h3>The Rules</h3>
+        <p>Why websites ask for consent and what laws require.</p>
+        <p><a href="privacy-laws.html">Read the rules</a></p>
+      </article>
+      <article class="card">
+        <h3>The Vocabulary</h3>
+        <p>Definitions of the terms you will see in privacy notices.</p>
+        <p><a href="key-concepts.html">Read the key concepts</a></p>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer: class project note with link to the course website -->
+  <footer id="site-footer">
+    <p>
+      This website is a class project for IT 3203 Web Development.
+      <a href="https://ksuweb.github.io/IT3203/">Visit the class website</a>.
+    </p>
+  </footer>
+
+</body>
+</html>

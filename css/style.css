@@ -1,4 +1,10 @@
-
+/* =========================================================
+   style.css
+   Single stylesheet for the Cookies and Privacy website.
+   Organized as: 1) design tokens, 2) base (type selectors),
+   3) layout (flex and grid), 4) components (class selectors),
+   5) page-specific pieces (id selectors), 6) states (hover).
+   ========================================================= */
 :root {
   --color-primary: #245a42;   
   --color-accent: #2f6b4f;    

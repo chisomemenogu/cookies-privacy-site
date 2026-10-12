@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Diagram of the cookie lifecycle between a browser and a web server.
+     Drawn by hand for this class project. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" role="img"
+     aria-labelledby="flow-title flow-desc" width="640" height="280">
+  <title id="flow-title">How a cookie travels between browser and server</title>
+  <desc id="flow-desc">A browser requests a page. The server replies with a Set-Cookie header. The browser stores the cookie and sends it back in a Cookie header on later requests.</desc>
+
+  <!-- Browser box (left) -->
+  <rect x="20" y="90" width="160" height="110" rx="8" fill="#1f3a5f"/>
+  <text x="100" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#ffffff">Browser</text>
+  <text x="100" y="166" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#c9d3df">stores cookies</text>
+
+  <!-- Server box (right) -->
+  <rect x="460" y="90" width="160" height="110" rx="8" fill="#2e6da4"/>
+  <text x="540" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#ffffff">Web server</text>
+  <text x="540" y="166" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#eaf2fb">sets cookies</text>
+
+  <!-- Step 1: browser to server -->
+  <line x1="185" y1="112" x2="455" y2="112" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="320" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#222222">1. GET /page (no cookie yet)</text>
+
+  <!-- Step 2: server to browser -->
+  <line x1="455" y1="150" x2="185" y2="150" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="320" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#222222">2. Set-Cookie: theme=dark</text>
+
+  <!-- Step 3: browser sends it back later -->
+  <line x1="185" y1="200" x2="455" y2="200" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="320" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#222222">3. Cookie: theme=dark (later requests)</text>
+
+  <text x="320" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555555">HTTP is stateless, so cookies let the server recognize returning visitors.</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#555555"/>
+    </marker>
+  </defs>
+</svg>

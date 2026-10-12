@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character set and responsive viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How cookies are set, sent, and configured, including first-party and third-party cookies and session and persistent cookies.">
+  <title>How Cookies Work | Cookies and Privacy</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Main menu (same on every page; this page is marked current) -->
+  <header id="site-header">
+    <div class="header-inner">
+      <p class="site-title"><a href="index.html">Cookies &amp; Privacy</a></p>
+      <nav id="main-menu" aria-label="Main menu">
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-cookies-work.html" aria-current="page">How Cookies Work</a></li>
+          <li><a href="privacy-laws.html">Privacy Laws</a></li>
+          <li><a href="key-concepts.html">Key Concepts</a></li>
+          <li><a href="references.html">References</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <h1>How Cookies Work</h1>
+    <p class="subtitle">Topic 1: The mechanics of cookies</p>
+
+    <h2>Setting and Sending a Cookie</h2>
+    <p>
+      A cookie starts as a response header. When a server replies to a browser request,
+      it can include a <code>Set-Cookie</code> header. The browser saves the value and
+      includes it in a <code>Cookie</code> header on later requests to the same site.
+      The diagram below shows this three-step cycle.
+    </p>
+
+    <!-- Figure: the cookie lifecycle diagram (image with alt text and caption) -->
+    <figure class="figure-box">
+      <img src="images/cookie-flow.svg" width="640" height="280"
+           alt="Diagram of three steps. First, the browser requests a page without a cookie. Second, the server replies with Set-Cookie: theme=dark. Third, the browser sends Cookie: theme=dark on later requests.">
+      <figcaption>Figure 1. The cookie cycle between a browser and a web server.</figcaption>
+    </figure>
+
+    <!-- Note box explaining why cookies exist -->
+    <div class="note">
+      <p><strong>Why cookies exist:</strong> HTTP treats every request as independent.
+      Cookies add memory, which is why you stay logged in when you return to a site.</p>
+    </div>
+
+    <h2>Cookie Attributes</h2>
+    <p>Servers control how a cookie behaves by adding attributes after its value.</p>
+    <!-- Table of cookie attributes -->
+    <table>
+      <caption>Common cookie attributes</caption>
+      <thead>
+        <tr>
+          <th scope="col">Attribute</th>
+          <th scope="col">What it does</th>
+          <th scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>Expires</code> or <code>Max-Age</code></td>
+          <td>Sets how long the browser keeps the cookie. Without it, the cookie is a session cookie.</td>
+          <td><code>Max-Age=86400</code> (one day)</td>
+        </tr>
+        <tr>
+          <td><code>Secure</code></td>
+          <td>Sends the cookie only over HTTPS connections.</td>
+          <td><code>Secure</code></td>
+        </tr>
+        <tr>
+          <td><code>HttpOnly</code></td>
+          <td>Hides the cookie from JavaScript (<code>document.cookie</code>), which reduces theft by cross-site scripting.</td>
+          <td><code>HttpOnly</code></td>
+        </tr>
+        <tr>
+          <td><code>SameSite</code></td>
+          <td>Controls whether the cookie is sent on cross-site requests. Values are <code>Strict</code>, <code>Lax</code>, and <code>None</code>.</td>
+          <td><code>SameSite=Lax</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Types of Cookies</h2>
+
+    <h3>Session cookies and persistent cookies</h3>
+    <p>
+      A <strong>session cookie</strong> has no expiration date and is normally removed when
+      the browser closes. A <strong>persistent cookie</strong> has an expiration date and stays
+      on the device until that date. Persistent cookies are how sites remember you across visits.
+    </p>
+
+    <h3>First-party and third-party cookies</h3>
+    <p>
+      A <strong>first-party cookie</strong> belongs to the site you are visiting. A
+      <strong>third-party cookie</strong> is set by another domain, usually an advertising or
+      analytics company whose code runs inside the page. Because the same third party can appear
+      on many sites, its cookie can follow you from one site to the next.
+    </p>
+
+    <!-- Comparison table of cookie types -->
+    <table>
+      <caption>Comparing cookie types</caption>
+      <thead>
+        <tr>
+          <th scope="col">Type</th>
+          <th scope="col">Lifetime</th>
+          <th scope="col">Typical use</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>First-party session</td>
+          <td>Until the browser closes</td>
+          <td>Keeping items in a shopping cart</td>
+        </tr>
+        <tr>
+          <td>First-party persistent</td>
+          <td>Days, months, or years</td>
+          <td>Remembering language or login</td>
+        </tr>
+        <tr>
+          <td>Third-party persistent</td>
+          <td>Often long</td>
+          <td>Cross-site advertising and tracking</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Beyond Cookies</h2>
+    <p>
+      Cookies are not the only way to store data. Browsers also offer <strong>local storage</strong>,
+      which holds key-value data that is not sent with each request, and <strong>device fingerprinting</strong>,
+      which identifies a device by combining details such as screen size, fonts, and browser version.
+      Fingerprinting stores nothing on the device, so it is harder for users to see and delete.
+    </p>
+  </main>
+
+  <!-- Footer with class project note -->
+  <footer id="site-footer">
+    <p>
+      This website is a class project for IT 3203 Web Development.
+      <a href="https://ksuweb.github.io/IT3203/">Visit the class website</a>.
+    </p>
+  </footer>
+
+</body>
+</html>

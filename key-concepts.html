@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character set and responsive viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Seven key concepts for understanding cookies and privacy: cookie, first-party and third-party cookies, session and persistent cookies, consent banner, and fingerprinting.">
+  <title>Key Concepts | Cookies and Privacy</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Main menu (same on every page; this page is marked current) -->
+  <header id="site-header">
+    <div class="header-inner">
+      <p class="site-title"><a href="index.html">Cookies &amp; Privacy</a></p>
+      <nav id="main-menu" aria-label="Main menu">
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-cookies-work.html">How Cookies Work</a></li>
+          <li><a href="privacy-laws.html">Privacy Laws</a></li>
+          <li><a href="key-concepts.html" aria-current="page">Key Concepts</a></li>
+          <li><a href="references.html">References</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <h1>Key Concepts</h1>
+    <p class="subtitle">Seven essential terms for this topic</p>
+
+    <!-- Definition list of the key concepts -->
+    <dl class="term-list">
+      <dt>Cookie</dt>
+      <dd>A small text value that a server asks the browser to store with a <code>Set-Cookie</code> header. The browser returns it in later requests to the same site.</dd>
+
+      <dt>First-party cookie</dt>
+      <dd>A cookie set by the domain shown in the address bar. It is used for core site features such as login and preferences.</dd>
+
+      <dt>Third-party cookie</dt>
+      <dd>A cookie set by a domain other than the one the user is visiting, usually through an embedded ad or analytics script. It can follow users across many sites.</dd>
+
+      <dt>Session cookie</dt>
+      <dd>A cookie without an expiration date. It is normally deleted when the browser session ends.</dd>
+
+      <dt>Persistent cookie</dt>
+      <dd>A cookie with an <code>Expires</code> or <code>Max-Age</code> value. It stays on the device until that time passes or it is deleted.</dd>
+
+      <dt>Consent banner</dt>
+      <dd>The notice that asks a visitor to accept or reject non-essential cookies. Under the GDPR, a valid banner gives a real choice and does not hide the option to refuse.</dd>
+
+      <dt>Fingerprinting</dt>
+      <dd>Identifying a device by combining attributes such as screen size, installed fonts, time zone, and browser version. It does not need to store anything on the device.</dd>
+    </dl>
+  </main>
+
+  <!-- Footer with class project note -->
+  <footer id="site-footer">
+    <p>
+      This website is a class project for IT 3203 Web Development.
+      <a href="https://ksuweb.github.io/IT3203/">Visit the class website</a>.
+    </p>
+  </footer>
+
+</body>
+</html>

@@ -117,7 +117,7 @@ a {
   padding: 2rem 16px;
 }
 
-/* 4) Components: class selectors reused across pages */
+/* class selectors used in all pages */
 .site-title {
   margin: 0;
   font-family: var(--font-heading);

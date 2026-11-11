@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character set and responsive viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A ten-question self-assessment quiz on cookies and privacy, with a ten-minute time limit, instant scoring, and a reset button.">
+  <title>Self-Assessment Quiz | Cookies and Privacy</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Main menu  -->
+  <header id="site-header">
+    <div class="header-inner">
+      <p class="site-title"><a href="index.html">Cookies &amp; Privacy</a></p>
+      <nav id="main-menu" aria-label="Main menu">
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-cookies-work.html">How Cookies Work</a></li>
+          <li><a href="privacy-laws.html">Privacy Laws</a></li>
+          <li><a href="key-concepts.html">Key Concepts</a></li>
+          <li><a href="references.html">References</a></li>
+          <li><a href="quiz.html" aria-current="page">Quiz</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <h1>Cookies and Privacy Self-Assessment</h1>
+    <p class="subtitle">Ten questions to test what you learned on this site</p>
+
+    <!-- Instructions and timer controls -->
+    <section class="quiz-intro" aria-labelledby="quiz-rules-heading">
+      <h2 id="quiz-rules-heading">Before You Begin</h2>
+      <p>
+        You have <strong>10 minutes</strong> to answer all ten questions. The timer starts when you
+        click <strong>Start quiz</strong>. You need <strong>7 correct answers</strong> to pass.
+        If time runs out, your answers are submitted automatically.
+      </p>
+      <div class="quiz-controls">
+        <p class="timer" aria-live="off">
+          Time left: <span id="time-left">10:00</span>
+        </p>
+        <button type="button" id="start-btn" class="btn">Start quiz</button>
+      </div>
+    </section>
+
+    <!-- Results panel: hidden until the quiz is submitted -->
+    <section id="results-panel" class="results" aria-labelledby="results-heading" tabindex="-1" hidden>
+      <h2 id="results-heading">Your Results</h2>
+      <div class="result-summary">
+        <p id="overall-result" class="overall-result"></p>
+        <p>Score: <strong id="total-score"></strong></p>
+        <p>Time spent: <strong id="time-spent"></strong></p>
+      </div>
+      <h3>Question by question</h3>
+      <ol id="result-list" class="result-list"></ol>
+    </section>
+
+    <!-- The quiz form. Inputs stay disabled until the quiz is started. -->
+    <form id="quiz-form" class="quiz-form" novalidate>
+
+      <!-- Q1: fill in the blank -->
+      <fieldset class="question" disabled>
+        <legend>1. A cookie set by the website you are visiting is a ______ cookie.</legend>
+        <label for="q1">Your answer:</label>
+        <input type="text" id="q1" name="q1" autocomplete="off">
+      </fieldset>
+
+      <!-- Q2: fill in the blank -->
+      <fieldset class="question" disabled>
+        <legend>2. The HTTP response header a server uses to create a cookie is called ______.</legend>
+        <label for="q2">Your answer:</label>
+        <input type="text" id="q2" name="q2" autocomplete="off">
+      </fieldset>
+
+      <!-- Q3: fill in the blank -->
+      <fieldset class="question" disabled>
+        <legend>3. The cookie attribute that sends a cookie only over HTTPS is ______.</legend>
+        <label for="q3">Your answer:</label>
+        <input type="text" id="q3" name="q3" autocomplete="off">
+      </fieldset>
+
+      <!-- Q4: multiple choice, one correct answer -->
+      <fieldset class="question" disabled>
+        <legend>4. Which cookie attribute hides a cookie from JavaScript?</legend>
+        <label class="option"><input type="radio" name="q4" value="a"> a) Secure</label>
+        <label class="option"><input type="radio" name="q4" value="b"> b) HttpOnly</label>
+        <label class="option"><input type="radio" name="q4" value="c"> c) SameSite</label>
+        <label class="option"><input type="radio" name="q4" value="d"> d) Max-Age</label>
+      </fieldset>
+
+      <!-- Q5: multiple choice, one correct answer -->
+      <fieldset class="question" disabled>
+        <legend>5. A session cookie is normally removed when:</legend>
+        <label class="option"><input type="radio" name="q5" value="a"> a) One year has passed</label>
+        <label class="option"><input type="radio" name="q5" value="b"> b) The current page reloads</label>
+        <label class="option"><input type="radio" name="q5" value="c"> c) The browser session ends</label>
+        <label class="option"><input type="radio" name="q5" value="d"> d) The user clicks "Accept"</label>
+      </fieldset>
+
+      <!-- Q6: multiple choice, one correct answer -->
+      <fieldset class="question" disabled>
+        <legend>6. Under EU rules, non-essential cookies generally require:</legend>
+        <label class="option"><input type="radio" name="q6" value="a"> a) An opt-out after they are set</label>
+        <label class="option"><input type="radio" name="q6" value="b"> b) The user's prior consent</label>
+        <label class="option"><input type="radio" name="q6" value="c"> c) No notice at all</label>
+        <label class="option"><input type="radio" name="q6" value="d"> d) A payment to the website</label>
+      </fieldset>
+
+      <!-- Q7: multiple choice, one correct answer -->
+      <fieldset class="question" disabled>
+        <legend>7. Device fingerprinting identifies a device by:</legend>
+        <label class="option"><input type="radio" name="q7" value="a"> a) Combining browser and device details</label>
+        <label class="option"><input type="radio" name="q7" value="b"> b) Storing a file on the device</label>
+        <label class="option"><input type="radio" name="q7" value="c"> c) Blocking all cookies</label>
+        <label class="option"><input type="radio" name="q7" value="d"> d) Encrypting network traffic</label>
+      </fieldset>
+
+      <!-- Q8: multiple selection, more than one correct answer -->
+      <fieldset class="question" disabled>
+        <legend>8. Which of these are third-party cookies? Select all that apply.</legend>
+        <label class="option"><input type="checkbox" name="q8-a" data-q="q8" value="a"> a) An advertising network's script embedded in a news site</label>
+        <label class="option"><input type="checkbox" name="q8-b" data-q="q8" value="b"> b) The login cookie a site sets for its own users</label>
+        <label class="option"><input type="checkbox" name="q8-c" data-q="q8" value="c"> c) An analytics domain loaded on the page you are visiting</label>
+        <label class="option"><input type="checkbox" name="q8-d" data-q="q8" value="d"> d) A preference cookie set by the page you are visiting</label>
+      </fieldset>
+
+      <!-- Q9: multiple selection, more than one correct answer -->
+      <fieldset class="question" disabled>
+        <legend>9. Which statements about the CCPA are correct? Select all that apply.</legend>
+        <label class="option"><input type="checkbox" name="q9-a" data-q="q9" value="a"> a) It uses an opt-out model for selling or sharing data</label>
+        <label class="option"><input type="checkbox" name="q9-b" data-q="q9" value="b"> b) It protects personal information of California residents</label>
+        <label class="option"><input type="checkbox" name="q9-c" data-q="q9" value="c"> c) It requires prior opt-in consent for every cookie</label>
+        <label class="option"><input type="checkbox" name="q9-d" data-q="q9" value="d"> d) It requires a "Do Not Sell or Share" option for covered businesses</label>
+      </fieldset>
+
+      <!-- Q10: multiple selection, more than one correct answer -->
+      <fieldset class="question" disabled>
+        <legend>10. Which cookie attributes make a cookie more secure? Select all that apply.</legend>
+        <label class="option"><input type="checkbox" name="q10-a" data-q="q10" value="a"> a) Secure</label>
+        <label class="option"><input type="checkbox" name="q10-b" data-q="q10" value="b"> b) HttpOnly</label>
+        <label class="option"><input type="checkbox" name="q10-c" data-q="q10" value="c"> c) Max-Age</label>
+        <label class="option"><input type="checkbox" name="q10-d" data-q="q10" value="d"> d) SameSite</label>
+      </fieldset>
+
+      <!-- Submit and reset buttons -->
+      <div class="actions">
+        <button type="submit" id="submit-btn" class="btn" disabled>Submit quiz</button>
+        <button type="button" id="reset-btn" class="btn btn-secondary">Reset quiz</button>
+      </div>
+    </form>
+  </main>
+
+  <!-- Footer with class project note -->
+  <footer id="site-footer">
+    <p>
+      This website is a class project for IT 3203 Web Development.
+      <a href="https://ksuweb.github.io/IT3203/">Visit the class website</a>.
+    </p>
+  </footer>
+
+  <!-- Quiz logic is in its own script at the end of the page -->
+  <script src="js/quiz.js"></script>
+</body>
+</html>
